@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>tokyo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="東京プロキシのホームページ">
+<meta name="keywords" content="tokyo-proxy,github-tokyo,konomi-tokyo,tokyo-konomi">
+<meta name="google-site-verification" content="4rsuidcq6iPW58bVmUCh4EHzT03Mh7nmj-qoA6g7jiE" />
+<link rel="stylesheet" href="https://template-party.com/template/tp_beginner5/tp_beginner5_orange01/css/style.css">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="index.html"><img src="https://tokyo-homepage.vercel.app/24c39d65c0785608469471d229acb33a.png" alt="tokyo-proxy"></a></h1>
+<aside id="mainimg"><img src="https://c.wallhere.com/photos/91/e3/cityscape_Tokyo_Japan-2067303.jpg!d" alt=""></aside>
+</header>
+
+<nav id="menubar">
+<ul>
+<li><a><label for="popup" id="txt_label">Ad</label></a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="make.html">About</a></li>
+</ul>
+</nav>
+
+<div id="contents">
+
+<section id="new">
+<h2>更新情報・お知らせ</h2>
+<dl>
+<dt>2024/01/18</dt>
+<dd>広告導入</dd>
+<dt>2024/01/16</dt>
+<dd>作り方追加</dd>
+<dt>2024/01/15</dt>
+<dd>より見やすくなりました</dd>
+<dt>2024/01/12</dt>
+<dd>画像が表示されないバグ解消</dd>
+<dt>2024/01/11</dt>
+<dd>ホームページ作成</dd>
+<dt>2023/11/17</dt>
+<dd>東京プロキシ公開</dd>
+</dl>
+</section>
+
+</div>
+<!--/contents-->
+
+<footer>
+<small><a href="index.html">Tokyo-Pr0xy </a>制作:�東�京�</small>
+<span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+</footer>
+
+</div>
+<!--/container-->
+
+</body>
+
+    <style>
+<div class="hcb_wrap"><pre class="prism line-numbers lang-css" data-lang="CSS"><code>input {
+    display: none;
+}
+
+/* ポップアップwindow部分 */
+#overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 70;
+    width: 100%;
+    height: 100%;
+}
+/* オーバーレイの背景部分 */
+#bg_gray {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 80;
+}
+/* ウィンドウ部分 */
+#window {
+    width: 50%;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -6px rgba(0,0,0,0.6);
+    z-index: 90;
+    opacity: 0;
+}
+/* 閉じるボタン */
+#btn_cloth {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CE5D8B;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+}
+#btn_cloth:hover {
+    opacity: 0.7;
+}
+#btn_cloth span,
+#btn_cloth span::before {
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #fff;
+}
+#btn_cloth span {
+    transform: rotate(45deg);
+}
+#btn_cloth span::before {
+    content: &quot;&quot;;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-90deg);
+}
+
+
+/* クリックで表示 */
+#popup:checked ~ #overlay {
+    visibility: visible;
+}
+#popup:checked ~ #overlay #window {
+    animation: fadein 500ms forwards;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* コンテンツ部分のスタイル */
+body {
+    margin: 30px;
+}
+
+
+#txt_label {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#txt_label:hover {
+    opacity: 0.7;
+}
+
+
+#msg a {
+    display: inline-block;
+    color: #fff;
+    background: #CE5D8B;
+    border-radius: 20px;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+}
+#msg a:hover {
+    opacity: 0.7;
+}</code></pre></div>
+        </style>    
+  
+    
+    <style>
+        input[type=checkbox].hide-checkbox{
+　　display: none;
+}
+    </style>
+        <body>
+      <input type="checkbox" id="popup">
+    <!-- ポップアップ部分 -->
+    <div id="overlay">
+        <label for="popup" id="bg_gray"></label> <!-- ウィンドウの外のグレーの領域 -->
+
+        <div id="window"> <!-- ウィンドウ部分 -->
+            <label for="popup" id="btn_cloth"> <!-- 閉じるボタン -->
+                <span></span>
+            </label>
+            <div id="msg"> <!-- ウィンドウのコンテンツ -->
+                <h2>　無料のSNS、Fiicenから、世界を俯瞰しよう。</h2>
+                <a target="_blank" rel="noopener noreferrer" href="https://fiicen.jp/">詳しくはこちら </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+  
+</html>
