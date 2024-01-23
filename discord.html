@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tokyo-proxy-discord</title>
+    <script>
+        // 1秒後に指定したURLにリダイレクトする関数
+        function redirectToURL() {
+            window.location.href = 'https://discord.gg/44y6tSA3bM'; // リダイレクト先のURLを指定
+        }
+
+        // ページ読み込み後、1秒後にリダイレクトする
+        window.onload = function() {
+            setTimeout(redirectToURL, 1000); // 1000ミリ秒（1秒）後にリダイレクト
+        };
+    </script>
+</head>
+<body>
+    <h1>リダイレクトされます...</h1>
+    <p>1秒後に別のページに移動します。</p>
+</body>
+</html>
