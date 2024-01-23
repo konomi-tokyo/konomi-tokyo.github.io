@@ -25,10 +25,39 @@
 <aside id="mainimg"><img src="https://c.wallhere.com/photos/91/e3/cityscape_Tokyo_Japan-2067303.jpg!d" alt=""></aside>
 </header>
 
+ </style>
+</head>
+<body>
+
+  <!-- ポップアップを開くリンク -->
+  <a href="#" onclick="showPopup()">ポップアップを開く</a>
+
+  <!-- ポップアップ広告のコンテナ -->
+  <div id="popupContainer" class="popup-container">
+    <p> 無料のSNS、Fiicenから、世界を俯瞰しよう。</p>
+    <a herf="/about.html">スキップ</a>
+    <a herf="https://fiicen.jp/home/">Fiicenへ</a>    
+  </div>
+
+  <!-- スクリプトの定義 -->
+  <script>
+    // ポップアップを表示する関数
+    function showPopup() {
+      var popupContainer = document.getElementById('popupContainer');
+      popupContainer.style.display = 'block';
+    }
+
+    // ポップアップを閉じる関数
+    function closePopup() {
+      var popupContainer = document.getElementById('popupContainer');
+      popupContainer.style.display = 'none';
+    }
+  </script>
+  
 <nav id="menubar">
 <ul>
 <li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
+<li>  <a href="#" onclick="showPopup()">About</a></li>
 </ul>
 </nav>
 
